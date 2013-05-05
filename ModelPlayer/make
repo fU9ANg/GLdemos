@@ -1,0 +1,8 @@
+#!/bin/sh
+
+g++ -c d2_image.cpp -I./ -o d2_image.o -lglut -lGL -ljpeg -lpng &&
+g++ -c main.cpp -I./ -o main.o -lglut -lGL -ljpeg -lpng &&
+g++ -o ModelPlayer main.o d2_image.o -lglut -lGL -ljpeg -lpng
+
+#g++ -c bmp.cpp -I./ -o bmp.o -lglut -lGL &&
+#g++ -o ModelPlayer bmp.o -lglut -lGL
