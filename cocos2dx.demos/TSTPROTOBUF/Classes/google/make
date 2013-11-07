@@ -1,0 +1,109 @@
+#!/bin/sh
+
+echo "compiling: stubs/atomicops_internals_x86_gcc.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/atomicops_internals_x86_gcc.cc -o atomicops_internals_x86_gcc.o &&
+
+echo "compiling: stubs/atomicops_internals_x86_msvc.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/atomicops_internals_x86_msvc.cc -o atomicops_internals_x86_msvc.o &&
+
+echo "compiling: stubs/common.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/common.cc -o common.o &&
+
+echo "compiling: stubs/once.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/once.cc -o once.o &&
+
+echo "compiling: stubs/stringprintf.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/stringprintf.cc -o stringprintf.o &&
+
+echo "compiling: extension_set.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c extension_set.cc -o extension_set.o &&
+
+echo "compiling: generated_message_util.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c generated_message_util.cc -o generated_message_util.o &&
+
+echo "compiling: message_lite.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c message_lite.cc -o message_lite.o &&
+
+echo "compiling: repeated_field.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c repeated_field.cc -o repeated_field.o &&
+
+echo "compiling: wire_format_lite.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c wire_format_lite.cc -o wire_format_lite.o &&
+
+echo "compiling: io/coded_stream.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c io/coded_stream.cc -o coded_stream.o &&
+
+echo "compiling: io/zero_copy_stream.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c io/zero_copy_stream.cc -o zero_copy_stream.o &&
+
+echo "compiling: io/zero_copy_stream_impl_lite.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c io/zero_copy_stream_impl_lite.cc -o zero_copy_stream_impl_lite.o &&
+
+echo "compiling: stubs/strutil.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/strutil.cc -o strutil.o &&
+
+echo "compiling: stubs/substitute.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/substitute.cc -o substitute.o &&
+
+echo "compiling: stubs/structurally_valid.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c stubs/structurally_valid.cc -o structurally_valid.o &&
+
+echo "compiling: descriptor.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c descriptor.cc -o descriptor.o &&
+
+echo "compiling: descriptor.pb.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c descriptor.pb.cc -o descriptor.pb.o &&
+
+echo "compiling: descriptor_database.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c descriptor_database.cc -o descriptor_database.o &&
+
+echo "compiling: dynamic_message.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c dynamic_message.cc -o dynamic_message.o &&
+
+echo "compiling: extension_set_heave.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c extension_set_heavy.cc -o extension_set_heavy.o &&
+
+echo "compiling: generated_message_reflection.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c generated_message_reflection.cc -o generated_message_reflection.o &&
+
+echo "compiling: message.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c message.cc -o message.o &&
+
+echo "compiling: reflection_ops.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c reflection_ops.cc -o reflection_ops.o &&
+
+echo "compiling: service.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c service.cc -o service.o &&
+
+echo "compiling: text_format.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c text_format.cc -o text_format.o &&
+
+echo "compiling: unknown_field_set.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c unknown_field_set.cc -o unknown_field_set.o &&
+
+echo "compiling: wire_format.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c wire_format.cc -o wire_format.o &&
+
+echo "compiling: io/gzip_stream.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c io/gzip_stream.cc -o gzip_stream.o &&
+
+echo "compiling: io/pointer.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c io/printer.cc -o printer.o &&
+
+echo "compiling: io/tokenizer.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c io/tokenizer.cc -o tokenizer.o &&
+
+echo "compiling: io/zero_copy_stream_impl.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c io/zero_copy_stream_impl.cc -o zero_copy_stream_impl.o &&
+
+echo "compiling: compiler/importer.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c compiler/importer.cc -o importer.o &&
+
+echo "compiling: compiler/parser.cc"
+g++ -I. -I./stubs -I./io -I./compiler -pthread -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -g -DNDEBUG -c compiler/parser.cc -o parser.o &&
+	
+echo "======= llllibprotobuf.a ======="
+
+ar cru llllibprotobuf.a  atomicops_internals_x86_gcc.o atomicops_internals_x86_msvc.o common.o once.o stringprintf.o extension_set.o generated_message_util.o message_lite.o repeated_field.o wire_format_lite.o coded_stream.o zero_copy_stream.o zero_copy_stream_impl_lite.o strutil.o substitute.o structurally_valid.o descriptor.o descriptor.pb.o descriptor_database.o dynamic_message.o extension_set_heavy.o generated_message_reflection.o message.o reflection_ops.o service.o text_format.o unknown_field_set.o wire_format.o gzip_stream.o printer.o tokenizer.o zero_copy_stream_impl.o importer.o parser.o
+
+ranlib llllibprotobuf.a

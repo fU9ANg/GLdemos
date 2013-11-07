@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rm -rf *.o stubs/*.c io/*.c compiler/*.c
